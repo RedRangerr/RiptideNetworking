@@ -26,12 +26,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Mono.Cecil" Version="0.11.4" />
+    <UPMSourceFiles Remove="Highlevel\CodeGeneration\MessageHelpers.cs" />
+    <UPMSourceFiles Remove="Highlevel\Core\MessageReaderExtensions.cs" />
+    <UPMSourceFiles Remove="Highlevel\Core\MessageWriterExtensions.cs" />
+    <UPMSourceFiles Remove="Highlevel\Core\Reader.cs" />
+    <UPMSourceFiles Remove="Highlevel\Core\Writer.cs" />
+    <UPMSourceFiles Remove="Highlevel\Data.cs" />
+    <UPMSourceFiles Remove="Highlevel\IMessage.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="HighLevel\CodeGen" />
-    <Folder Include="HighLevel\Core" />
+    <PackageReference Include="Mono.Cecil" Version="0.11.4" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
